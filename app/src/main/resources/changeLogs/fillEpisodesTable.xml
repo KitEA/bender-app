@@ -1,0 +1,34 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="fill-episodes-table" author="Kit">
+        <loadData tableName="episode" file="dbFiles/episode_list.csv">
+            <column index="0"
+                    name="season"
+                    type="NUMERIC"/>
+            <column index="1"
+                    name="episode"
+                    type="NUMERIC"/>
+            <column index="2"
+                    name="episode_in_season"
+                    type="NUMERIC"/>
+            <column index="3"
+                    name="title"
+                    type="STRING"/>
+            <column index="4"
+                    name="director"
+                    type="STRING"/>
+            <column index="5"
+                    name="writer"
+                    type="STRING"/>
+            <column index="6"
+                    name="air_date"
+                    type="STRING"/>
+            <column index="7"
+                    name="opening_line"
+                    type="STRING"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>
