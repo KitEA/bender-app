@@ -6,7 +6,7 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface EpisodeMapper {
     EpisodeDto episodeToEpisodeDto(Episode episode);
     List<EpisodeDto> episodesToEpisodesDto(List<Episode> episodes);
